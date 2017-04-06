@@ -2,6 +2,7 @@
 
 const booksApi = require('./api.js')
 const booksUi = require('./ui.js')
+const getFormFields = require('../../../lib/get-form-fields')
 
 // get in the habit of naming your handlers, it eases debugging.
 //
@@ -16,6 +17,19 @@ const onGetBooks = function (event) {
   .catch(booksUi.onError)
 }
 
+const onGetBook = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log('Here is the data:')
+  console.log(data)
+  const book = data.book
+
+  if (book.id.length !== 0) {
+    console.warn('Please provide a book id!')
+  }
+}
+
 module.exports = {
-  onGetBooks
+  onGetBooks,
+  onGetBook
 }

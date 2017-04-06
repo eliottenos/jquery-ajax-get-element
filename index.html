@@ -12,18 +12,18 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1>Jquery AJAX CRUD</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <p>This is how it works</p>
 
-      <form class='books'>
-        <button type="submit" class="btn btn-default">Get all Books</button>
+      <h2>Get Single Book</h2>
+      <form class='books' id='books-search'>
+        <button type='submit' class='btn btn-default'>Get all Books</button>
+      </form>
+
+      <form class='books' id='book-search'>
+        <input type='text' name='book[id]' id='book-id' placeholder='book id here'>
+        <button type='submit' name='button' class='btn btn-default'>Get a Books</button>
       </form>
 
     </body>
